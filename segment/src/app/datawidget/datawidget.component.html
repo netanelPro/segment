@@ -1,0 +1,38 @@
+<div cdkDropList (cdkDropListDropped)="drop($event)">
+
+    <table>
+      <tr>
+        <td></td>
+        <td>Destination: Ship City</td>
+        <td>Destination: Ship Country</td>
+        <td>Product Name</td>
+        <td>Price for one unit</td>
+        <td>Available quantity</td>
+        <td>Discount</td>
+        <td>Quantity per Unit</td>
+        <td>Units in Stock</td>
+        <td>Unit Price Products</td>
+        <td>Units On Order</td>
+      </tr>
+      
+        <tr *ngFor="let item of items;let i=index"
+        [ngStyle]="{'background-color':(i%2)===0?'green':'red'}" cdkDrag>
+         <td><p>Item</p></td> 
+         <td><p>{{item.ShipCity}}</p></td>
+         <td><p  (click)="sumUnitStock($event.target.innerText)"
+           >{{item.ShipCountry}}</p></td>
+         <td><p>{{item.ProductName}}</p></td>
+         <td><p>{{item.UnitPrice}}</p></td>
+         <td><p>{{item.Quantity}}</p></td>
+         <td><p>{{item.Discount}}</p></td>
+        
+         <td><p>{{item.QuantityPerUnit}}</p></td>
+         <td><p>{{item.UnitsInStock}}</p></td>
+         <td><p >{{item['UnitPrice (Products)']}}</p></td>
+         <td><p>{{item.UnitsOnOrder}}</p></td>
+        </tr>
+      
+       
+    </table>
+    
+    </div>

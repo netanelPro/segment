@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'bulma/css/bulma.css';
+
+tr{
+    margin:2px;
+    border:solid black;
+    border-radius: 10px;
+}
+
+td{
+    border:solid black;
+    
+    margin:1px;
+    white-space: normal;
+}
